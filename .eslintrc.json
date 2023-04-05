@@ -3,11 +3,12 @@
 		"browser": true,
 		"es2021": true
 	},
+
 	"extends": [
-		"plugin:react/recommended",
 		"airbnb",
-		"prettier",
-		"plugin:react/jsx-runtime"
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"prettier"
 	],
 	"overrides": [],
 	"parserOptions": {
@@ -18,13 +19,8 @@
 	"rules": {
 		"import/no-extraneous-dependencies": [
 			"error",
-			{ "devDependencies": ["**/*.config.js"] }
+			{ "devDependencies": ["**/*.test.js", "**/*.config.js"] }
 		],
-		"import/order": [
-			"error",
-			{
-				"groups": ["builtin", "external", "object"]
-			}
-		]
+		"import/order": ["error"]
 	}
 }
